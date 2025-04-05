@@ -14,10 +14,8 @@ function showContent() {
 }
 
 // Fetches images from the NASA API
-async function getNasaPictures() {
+async function getNasaPictures(apiKey, count = 5) {
   // NASA API key
-  const count = 5;
-  const apiKey = "DEMO_KEY"; // Replace with your actual API key
   const apiURL = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=${count}`;
   try {
     // Show loader while fetching data
@@ -134,4 +132,4 @@ document.getElementById("load-more").addEventListener("click", () => {
 });
 
 // On Load
-getNasaPictures();
+getNasaPictures(window.CONFIG.NASA_API_KEY);
