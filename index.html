@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA API App</title>
+    <!-- Meta Description -->
+    <meta name="description" content="NASA APOD App Landing Page.">
+    <!-- Metha Author -->
+    <meta name="author" content="Alfonso Scudiero">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32"  href="./favicon.png">
+    <!-- Meta Tags for Social Media -->
+    <meta property="og:url" content="https://alfonsoscudiero.github.io/wdd330/">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="Nasa APOD App">
+    <meta property="og:description" content="NASA APOD App is a an interactive guide to provide daily images of the universe, accompanied by professional explanations.">
+    <meta property="og:image" content="https://ibb.co/svwr0mnJ">
+    <!-- External Styles -->
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <!--External Scripts  -->
+    <script src="./scripts/navigationMenu.js" defer></script>
+    <script src="./scripts/validateForm.js" defer></script>
+    <script src="./scripts/updateDate.js" defer></script>
+    <!-- External Resources -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header and Navigation Menu -->
+    <header id="header-content">
+        <!-- Menu Overlay -->
+        <div class="overlay overlay-slide-left" id="overlay">    
+            <!-- Menu Items -->
+            <nav>
+                <ul>
+                    <li id="nav-1" class="slide-out-1 active"><a href="#home">Home</a></li>
+                    <li id="nav-2" class="slide-out-2"><a href="#apod-container"> NASA APOD</a></li>
+                    <li id="nav-3" class="slide-out-3"><a href="#favorites-container">Favorites</a></li>
+                    <li id="nav-4" class="slide-out-4"><a href="#mars-container">Mars Exploration</a></li>
+                    <li id="nav-5" class="slide-out-5"><a href="#contact-container">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>  
+        <!-- Menu Bars -->
+        <div class="menu-bars" id="menu-bars">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>  
+    </header>
+    <!-- Main Content -->
+    <main>
+        <!-- Loader -->
+        <div class="loader hidden">
+            <img src="./animations/earthRotation.svg" alt="Earth sattelite animation">
+        </div>
+
+        <!-- Splash Container -->
+        <section id="home">
+            <a href="https://www.byui.edu/" target="_blank">BYU Idaho</a>
+            <div class="home-content">
+                <h1>Ready to Explore the Universe?</h1>
+                <div class="search-container">
+                    <form id="search-form" action="https://www.nasa.gov/" method="GET">
+                        <label for="search-input" class="visually-hidden">Search NASA</label>
+                        <input type="search" id="search-input" name="search" placeholder="Search..." autocomplete="off" spellcheck="false" title="Search for images, videos, or articles on NASA website" >
+                        <button type="submit" id="search-button" aria-label="Search NASA" title="Search NASA">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>   
+
+        <!-- APOD Container -->
+        <section id="apod-container">
+            <h2 id="apod-container-title-splash-page">NASA Astronomy Picture of the Day</h2>
+            <!-- Grid Container -->
+            <div class="grid-container-content">
+                <div class="description-container">
+                    <p>NASA's Astronomy Picture of the Day <span class="highlight-text">(APOD)</span> is a website that provides a daily captivating image or photograph of our universe, accompanied by a concise explanation written by a professional astronomer.</p>
+                    <p>Each day, a new image is featured, showcasing the beauty and wonders of space, from stunning nebulae to distant galaxies.</p>
+                    <p>APOD serves as an educational resource, inspiring curiosity and fostering a deeper understanding of astronomy.</p>
+                    <p>Happy exploring!</p>                   
+                    <a href="https://alfonsoscudiero.github.io/wdd330/apod.html" target="_blank" class="cta-button" id="apod-button">Discover It</a>
+                </div>
+                <figure class="figure-container">
+                    <img src="./images/large-images/apod-lg.webp" alt="Astronomy Picture of the Day" title="Astronomy Picture of the Day" loading="lazy">                        
+                    <figcaption>Astronomy Picture of the Day</figcaption>
+                </figure>
+            </div>
+        </section>  
+
+        <!-- Favorites Container -->
+        <section id="favorites-container">
+            <h2 id="favorites-container-title-splash-page">Favorites Images</h2> 
+            <!-- Grid Container -->
+            <div class="grid-container-content">
+                <div class="description-container">
+                    <p>Welcome to your personal gallery! This is where you'll find all the astronomical wonders you've marked as favorites from NASA's APOD. Think of it as your own curated collection of the universe's most breathtaking sights, all within easy reach.</p>
+                    <p>Whether it's a swirling nebula, a distant galaxy, or a stunning planetary close-up, if it captured your imagination, it's here.</p>
+                    <p> Dive back into those moments of awe and rediscover the cosmos through your own eyes. Just click below to explore your saved favorites</p>
+                    <a href="https://alfonsoscudiero.github.io/wdd330/favorites.html" target="_blank" class="cta-button" id="favorites-button">View My Favorites</a>
+                </div>
+                <figure class="figure-container favorites-figure">
+                    <img src="./images/large-images/favorite-lg.webp" alt="View of Earth from space with a spacecraft visible in the upper right corner." title="Your Cosmic Collection" loading="lazy">                        
+                    <figcaption>A breathtaking perspective of Earth</figcaption>
+                </figure>
+            </div>
+        </section>    
+
+        <!-- Mars Exploration Container -->
+        <section id="mars-container">
+            <h2 id="mars-container-title-splash-page">Mars Exploration</h2>
+            <!-- Grid Container -->
+            <div class="grid-container-content">
+                <div class="description-container">
+                    <p>Embark on a virtual journey to the red planet with our <span class="highlight-text">Mars Exploration gallery!</span> Witness the latest, unfiltered snapshots beamed back from our intrepid robotic explorers. Feel the thrill of discovery as you peruse images straight from the Martian surface, capturing the raw beauty and enigmatic landscapes of a world beyond our own.
+                    </p>
+                    <p>From the towering Olympus Mons to the intricate details of Martian dust storms, each image tells a story of exploration and scientific inquiry.</p>
+                    <p>Click below to start your adventure and uncover the secrets of Mars!</p>
+                    <a href="https://alfonsoscudiero.github.io/wdd330/discover-mars.html" target="_blank" class="cta-button" id="mars-button">Explore Mars Now</a>
+                </div>
+                <figure class="figure-container mars-figure">
+                    <img src="./images/large-images/marsRover-lg.webp" alt="Perseverance rover, from NASA's Mars 2020 mission, captures a selfie on the Martian surface, revealing its intricate machinery and the rugged terrain of Mars" title="Self-portrait of the Perseverance rover on Mars" loading="lazy">                        
+                    <figcaption>Self-portrait of the Perseverance rover on Mars</figcaption>
+                </figure>
+            </div>
+        </section>
+        
+        <!-- Contact Container -->
+        <section id="contact-container">
+            <h2 id="contact-container-title-splash-page">Join Us</h2>
+            <div class="grid-container-content">
+                <div class="description-container">
+                    <p>Embark on a daily cosmic adventure with our exclusive newsletter, delivering breathtaking NASA imagery, breaking mission updates, and fascinating astronomical insights directly to your inbox.</p>
+                    <p>Imagine waking up to stunning visuals of distant galaxies and being the first to know about groundbreaking discoveries.</p>
+                    <p>Join our community of space enthusiasts and stay connected with the latest in astronomy and space exploration.</p>
+                </div>    
+                <div class="contact-form-container">
+                    <h3>Sign Up for Our Newsletter</h3>
+                    <!-- Form -->
+                    <form id="sign-up-form" novalidate>
+                        <!-- Full Name -->
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" minlength="3" maxlength="100" required>
+                        </div>
+                        <!-- Email Address -->
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        </div>
+                        <!-- Password -->
+                        <div class="form-group">
+                            <label for="password1">Password</label>
+                            <input type="password" id="password1" placeholder="Create Password (Min. 8 Characters)" required minlength="8" autocomplete="off" title="Password must be at least 8 characters long" >
+                        </div>
+                        <!-- Confirm Password -->
+                        <div class="form-group">
+                            <label for="password2">Confirm Password</label>
+                            <input type="password" id="password2" name="password" placeholder="Re-enter Password" required autocomplete="off" >
+                        </div>
+                        <!-- Submit Button -->
+                        <button type="submit">Explore Now</button>
+                    </form>
+                    <!-- Error / Success Message -->
+                    <div class="message-container">
+                        <h4 id="message">Unlock It</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="current-year"></span> Alfonso Scudiero | Images by <a href="https://unsplash.com/" target="_blank"> Unplash</a></p>
+            <p>WDD330 - BYU Idaho</p>
+            <p>Open API provided by <a href="https://api.nasa.gov/">NASA</a></p>
+            <hr id="border-clear">
+            <p>Last Updated: <span id="date-modified"></span></p>
+        </div>
+    </footer>   
+</body>
+</html>
