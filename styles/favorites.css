@@ -1,0 +1,228 @@
+body {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+  overflow-y: auto;
+}
+
+/* Menu Bars */
+.menu-bars {
+  position: absolute;
+}
+
+/* Favorites CSS Styles */
+section#favorites-splash {
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  background-image: url("../images/hero-images/supernova.webp");
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+section#favorites-splash::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+section#favorites-splash > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Favorite Container Style */
+section#favorites-wrapper {
+  background: var(--light-color);
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  overflow-x: hidden;
+  padding-bottom: 2rem;
+}
+
+#favorites-wrapper-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--font-color);
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  user-select: none;
+  width: 100%;
+  margin: 2rem 0 1rem;
+  padding: 1rem;
+}
+
+/* Favorite Container Styling */
+.favorites-container-grid {
+  width: 100%;
+  max-width: 800px;
+  padding: 1rem 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Favorite Card Styling */
+.favorite-card-layout {
+  background: var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0 0 0 / 20%);
+  transition: 0.2s;
+  margin: 0;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.favorite-card-layout:hover {
+  box-shadow: 0 8px 16px 0 rgba(0 0 0 / 30%);
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  align-self: center;
+  border-radius: 10px 10px 0 0;
+  object-fit: contain;
+  object-position: center;
+}
+
+.card-body {
+  padding: 10px 20px 20px;
+}
+
+.card-title {
+  color: var(--font-color);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 auto 10px;
+  text-transform: capitalize;
+}
+
+.clickable {
+  color: var(--navColor4);
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 5px auto 10px;
+}
+
+.clickable:hover {
+  text-decoration: underline;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.card-text {
+  color: var(--font-color);
+  font-size: 1.2rem !important;
+  margin: 5px auto;
+  font-family: "Inter", sans-serif;
+  text-transform: none;
+  line-height: 24px;
+}
+
+.card-body:last-of-type {
+  color: var(--font-color);
+  margin: 10px auto;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+}
+
+/* Remove Confirmation */
+.remove-confirmed {
+  background: rgba(252 61 33 / 90%);
+  padding: 8px 16px;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.2s;
+  z-index: 100;
+}
+
+.remove-confirmed h3 {
+  color: var(--primary-color);
+  margin: 0.5rem auto;
+}
+
+.remove-confirmed.hidden {
+  opacity: 0;
+}
+
+/* Hidden */
+.hidden {
+  display: none;
+}
+
+/* footer {
+    position: relative;
+    flex-shrink: 0;
+} */
+
+/* --- Media Queries ------------------------------ */
+/* Medium Screens (601px to 1920px) */
+@media (min-width: 601px) and (max-width: 1080px) {
+  #favorites-wrapper-title {
+    font-size: 1.75rem;
+  }
+
+  .favorites-container-grid {
+    gap: 1.5rem;
+    max-width: 600px;
+  }
+}
+
+/* Mobile Screens (0px to 600px) */
+@media (max-width: 600px) {
+  #favorites-wrapper-title {
+    font-size: 1.75rem;
+  }
+
+  .favorites-container-grid {
+    gap: 1rem;
+    max-width: 400px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-body .clickable {
+    font-size: 0.9rem;
+  }
+
+  .card-text {
+    font-size: 0.8rem;
+    line-height: 22px;
+  }
+
+  .card-body:last-of-type {
+    font-size: 1rem;
+  }
+}

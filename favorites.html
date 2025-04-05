@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Images</title>
+    <!-- Meta Description -->
+    <meta name="description" content="View your saved collection of stunning NASA's Astronomy Picture of the Day.">
+    <!-- Metha Author -->
+    <meta name="author" content="Alfonso Scudiero">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32"  href="./favicon.png">
+    <!-- Meta Tags for Social Media -->
+    <meta property="og:url" content="https://alfonsoscudiero.github.io/wdd330/">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="Nasa APOD App">
+    <meta property="og:description" content="View your saved collection of stunning NASA's Astronomy Picture of the Day">
+    <meta property="og:image" content="https://ibb.co/svwr0mnJ">
+    <!-- External Styles -->
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/favorites.css">
+    <!--External Scripts  -->
+    <script src="./scripts/navigationMenu.js" defer></script>
+    <script src="./scripts/favorites.js" defer></script>
+    <script src="./scripts/updateDate.js" defer></script>
+</head>
+<body>
+    <header id="header-content">
+        <!-- Menu Overlay -->
+        <div class="overlay overlay-slide-left" id="overlay">    
+            <!-- Menu Items -->
+            <nav>
+                <ul>
+                    <li id="nav-1" class="slide-out-1"><a href="https://alfonsoscudiero.github.io/wdd330/">Home</a></li>
+                    <li id="nav-2" class="slide-out-2"><a href="https://alfonsoscudiero.github.io/wdd330/apod.html"> NASA APOD</a></li>
+                    <li id="nav-3" class="slide-out-3  active"><a href="#favorites-wrapper">Favorites</a></li>
+                    <li id="nav-4" class="slide-out-4"><a href="https://alfonsoscudiero.github.io/wdd330/discover-mars.html">Mars Exploration</a></li>
+                    <li id="nav-5" class="slide-out-5"><a href="https://alfonsoscudiero.github.io/wdd330/#contact-container">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>  
+        <!-- Menu Bars -->
+        <div class="menu-bars" id="menu-bars">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>  
+    </header>
+
+    <main>
+        <!-- Loader -->
+        <div class="loader hidden">
+            <img src="./animations/earthRotation.svg" alt="Earth sattelite animation">
+        </div>
+        <!-- Hero Image and Title -->
+        <!-- Sections -->
+        <section id="favorites-splash">
+            <a href="https://www.byui.edu/" target="_blank">BYU Idaho</a>
+            <!-- Hero Image and Title -->
+            <div class="home-content">
+                <h1>Favorites NASA <br>Astronomy Images</h1>            
+            </div>
+        </section>
+
+        <!-- Favorites Container -->
+        <section id="favorites-wrapper">
+            <h2 id="favorites-wrapper-title">
+                Your Favorites Images
+            </h2>
+
+            <div class="favorites-container-grid">
+                <!-- Cards will be dynamically inserted here -->
+            </div>
+
+            <!-- Remove Confirmation -->
+            <div class="remove-confirmed hidden">
+                <h3>Removed...</h3>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="current-year"></span> Alfonso Scudiero | Images by <a href="https://unsplash.com/" target="_blank"> Unplash</a></p>
+            <p>WDD330 - BYU Idaho</p>
+            <p>Open API provided by <a href="https://api.nasa.gov/">NASA</a></p>
+            <hr id="border-clear">
+            <p>Last Updated: <span id="date-modified"></span></p>
+        </div>
+    </footer> 
+</body>
