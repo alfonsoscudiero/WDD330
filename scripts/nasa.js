@@ -14,9 +14,10 @@ function showContent() {
 }
 
 // Fetches images from the NASA API
-async function getNasaPictures(apiKey, count = 5) {
-  // NASA API key
+async function getNasaPictures(apiKey = "DEMO_KEY", count = 3) {
   const apiURL = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=${count}`;
+  // Limits for the DEMO_KEY are 30 requests per IP address per hour and 50 requests per day.
+  // If you need more requests, please sign up for your own API key at https://api.nasa.gov/
   try {
     // Show loader while fetching data
     loader.classList.remove("hidden"); // Remove hidden class to show loader
@@ -132,4 +133,4 @@ document.getElementById("load-more").addEventListener("click", () => {
 });
 
 // On Load
-getNasaPictures(window.CONFIG.NASA_API_KEY);
+getNasaPictures();
