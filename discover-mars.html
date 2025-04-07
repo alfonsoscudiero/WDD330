@@ -1,103 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Discover Mars</title>
-    <!-- Meta Description -->
-    <meta
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Discover Mars</title>
+<!-- Meta Description -->
+<meta
     name="description"
     content="Explore this page for a curated collection of Martian resources."
-    />
-    <!-- Metha Author -->
-    <meta name="author" content="Alfonso Scudiero" />
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png" />
-    <!-- Meta Tags for Social Media -->
-    <meta
+/>
+<!-- Metha Author -->
+<meta name="author" content="Alfonso Scudiero" />
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon.png" />
+<!-- Meta Tags for Social Media -->
+<meta
     property="og:url"
     content="https://alfonsoscudiero.github.io/wdd330/"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Nasa APOD App" />
-    <meta
+/>
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Nasa APOD App" />
+<meta
     property="og:description"
     content="Explore this page for a curated collection of Martian resources."
-    />
-    <meta property="og:image" content="https://ibb.co/svwr0mnJ" />
-    <!-- External Styles -->
-    <link rel="stylesheet" href="./styles/normalize.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/mars.css" />
-    <!--External Scripts  -->
-    <script src="./scripts/navigationMenu.js" defer></script>
-    <script src="./scripts/updateDate.js" defer></script>
+/>
+<meta property="og:image" content="https://ibb.co/svwr0mnJ" />
+<!-- External Styles -->
+<link rel="stylesheet" href="./styles/normalize.css" />
+<link rel="stylesheet" href="./styles/style.css" />
+<link rel="stylesheet" href="./styles/mars.css" />
+<!--External Scripts  -->
+<script src="./scripts/navigationMenu.js" defer></script>
+<script src="./scripts/mars.js" defer></script>
+<script src="./scripts/updateDate.js" defer></script>
 </head>
 <body>
-    <header id="header-content">
-        <!-- Menu Overlay -->
-        <div class="overlay overlay-slide-left" id="overlay">
-        <!-- Menu Items -->
-        <nav>
+<header id="header-content">
+    <!-- Menu Overlay -->
+    <div class="overlay overlay-slide-left" id="overlay">
+    <!-- Menu Items -->
+    <nav>
         <ul>
-            <li id="nav-1" class="slide-out-1">
+        <li id="nav-1" class="slide-out-1">
             <a href="https://alfonsoscudiero.github.io/wdd330/">Home</a>
-            </li>
-            <li id="nav-2" class="slide-out-2">
-            <a href="https://alfonsoscudiero.github.io/wdd330/apod.html">NASA APOD</a>
-            </li>
-            <li id="nav-3" class="slide-out-3">
-            <a href="https://alfonsoscudiero.github.io/wdd330/favorites.html">Favorites</a>
-            </li>
-            <li id="nav-4" class="slide-out-4  active">
+        </li>
+        <li id="nav-2" class="slide-out-2">
+            <a href="https://alfonsoscudiero.github.io/wdd330/apod.html"
+            >NASA APOD</a
+            >
+        </li>
+        <li id="nav-3" class="slide-out-3">
+            <a href="https://alfonsoscudiero.github.io/wdd330/favorites.html"
+            >Favorites</a
+            >
+        </li>
+        <li id="nav-4" class="slide-out-4 active">
             <a href="#mars-wrapper">Mars Exploration</a>
-            </li>
-            <li id="nav-5" class="slide-out-5"><a href="https://alfonsoscudiero.github.io/wdd330/#contact-container">Sign Up</a></li>
+        </li>
+        <li id="nav-5" class="slide-out-5">
+            <a
+            href="https://alfonsoscudiero.github.io/wdd330/#contact-container"
+            >Sign Up</a
+            >
+        </li>
         </ul>
-        </nav>
+    </nav>
     </div>
     <!-- Menu Bars -->
     <div class="menu-bars" id="menu-bars">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
     </div>
-    </header>
-    <main>
-        <!-- Loader -->
-        <div class="loader hidden">
-            <img
-            src="./animations/earthRotation.svg"
-            alt="Earth sattelite animation"/>               
-        </div>
+</header>
+<main>
+    <!-- Loader -->
+    <div class="loader hidden">
+    <img
+        src="./animations/earthRotation.svg"
+        alt="Earth sattelite animation"
+    />
+    </div>
 
-        <!-- Splash Screen -->
-        <section id="mars-splash">
-            <a href="https://www.byui.edu/" target="_blank">BYU Idaho</a>
-            <!-- Hero Image and Title -->
-            <div class="home-content">
-                <h1>Mars Exploration<br/>Images of NASA Rovers</h1>
-            </div>
-        </section>
+    <!-- Splash Screen -->
+    <section id="mars-splash">
+    <a href="https://www.byui.edu/" target="_blank">BYU Idaho</a>
+    <!-- Hero Image and Title -->
+    <div class="home-content">
+        <h1>Mars Exploration<br />Images of NASA Rovers</h1>
+    </div>
+    </section>
 
-        <!-- Mars Container -->
-        <section id="mars-wrapper">
-
-        </section>
-    
-    </main>
-    <!-- Footer -->
-    <footer>
-    <div class="footer-content">
+    <!-- Mars Container -->
+    <section id="mars-wrapper">
+    <!-- Navigation -->
+    <div id="mars-wrapper-discover">
+        <h2 id="mars-wrapper-discover-title">Mars Rover Photos</h2>
         <p>
+        Mars is one of the most explored bodies in our solar system, and
+        it's the only planet where we've sent rovers to explore the alien
+        landscape.<br />Mars remains our horizon goal for human exploration
+        because it is one of the only other places we know in the solar
+        system where life may have existed.<br />Image data gathered by
+        NASA's <span class="highlight-text rover">Persevereance</span> rover on Mars.<br/> There are 46 photos in 1467 sol collection of Perseverance exploring the Red Planet.
+        </p>
+    </div>
+    <div id="load-new-images">
+        <button id="load-more-images" class="clickable">Load More Photos</button>
+    </div>
+
+    <!-- Card Container -->
+    <div class="mars-container-grid">
+        <!-- Mars Rover Cards will be dynamically inserted here -->
+        <!-- <div class="mars-card-layout">
+            <a href="https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/01467/ids/edr/browse/ncam/NLG_1467_0797168737_792ECM_N0710160NCAM00527_00_2I4J01_1200.jpg" title="View Full Resolution Image" target="_blank">
+                <img
+                    src="https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/01467/ids/edr/browse/ncam/NLG_1467_0797168737_792ECM_N0710160NCAM00527_00_2I4J01_1200.jpg"
+                    alt="Mars Rover Image" class="card-img-top"
+                />
+            </a>
+            <div class="card-body">
+                <p>Camera: Navigation Camera - Left</p>
+                <p>Earth Day: 2025-04-05</p>
+                <p>Mission Status: Active</p>
+            </div>
+        </div> -->
+    </div>
+
+    </section>
+</main>
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+    <p>
         &copy; <span id="current-year"></span> Alfonso Scudiero | Images by
         <a href="https://unsplash.com/" target="_blank"> Unplash</a>
-        </p>
-        <p>WDD330 - BYU Idaho</p>
-        <p>Open API provided by <a href="https://api.nasa.gov/">NASA</a></p>
-        <hr id="border-clear" />
-        <p>Last Updated: <span id="date-modified"></span></p>
+    </p>
+    <p>WDD330 - BYU Idaho</p>
+    <p>Open API provided by <a href="https://api.nasa.gov/">NASA</a></p>
+    <hr id="border-clear" />
+    <p>Last Updated: <span id="date-modified"></span></p>
     </div>
-    </footer>  
+</footer>
 </body>
 </html>
