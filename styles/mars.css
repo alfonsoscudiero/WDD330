@@ -146,7 +146,7 @@ section#mars-wrapper {
     font-family: "Inter", sans-serif;
     color: var(--font-color);
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 28px;
     margin: 0;
     text-transform: none;
 }
@@ -160,14 +160,14 @@ section#mars-wrapper {
         background-image: url("../images/med-images/mars-crater-md.jpg");
     }
 
-    #mars-header h2 {
+    #mars-wrapper-discover h2 {
         font-size: 1.75rem;
-        }
+    }
     
-        #mars-container-grid {
+    .mars-container-grid  {
+        width: 95%;
         gap: 1.5rem;
-        max-width: 600px;
-        }
+    }
 }
 
 /* Mobile Screens (0px to 600px) */
@@ -176,15 +176,26 @@ section#mars-wrapper {
         background-image: url("../images/small-images/mars-crater-sm.jpg");
     }
 
-    #mars-header h2 {
+    #mars-wrapper-discover h2 {
         font-size: 1.5rem;
         padding-top: 1rem;
     }
 
-    #mars-container-grid {
-        gap: 1rem;
-        max-width: 100%;
-        padding: 0 1rem;
+    #mars-wrapper-discover p {
+        font-size: 1rem;
+        line-height: 24px;
+        width: 90%;
     }
+
+    .mars-container-grid {
+        width: 90%;
+        gap: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.8rem;
+        line-height: 22px;
+    }
+
 }
 
