@@ -135,7 +135,7 @@ section#mars-wrapper {
     border-radius: 10px 10px 0 0;
     object-fit: contain;
     object-position: center;
-    border-color: none;
+    border: none;
 } 
 
 .card-body {
